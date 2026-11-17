@@ -9,6 +9,7 @@ load test_helper
     AGENTS.md \
     LICENSE \
     .gitignore \
+    .github/workflows/test.yml \
     .mise/tasks/test \
     test/test_helper.bash \
     test/setup_suite.bash
