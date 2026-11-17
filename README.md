@@ -34,14 +34,14 @@ every lab is intended to provide:
 
 | command | purpose |
 | --- | --- |
-| `peninsula install` | initialize a complete, self-contained lab. |
-| `peninsula agent add` | register an agent with a defined role and scope. |
-| `peninsula agent home` | restore missing agent home documents. |
-| `peninsula doctor` | validate lab structure, dependencies, and invariants. |
+| `penisula install` | initialize a complete, self-contained lab. |
+| `penisula agent add` | register an agent with a defined role and scope. |
+| `penisula agent home` | restore missing agent home documents. |
+| `penisula doctor` | validate lab structure, dependencies, and invariants. |
 
 ## project status
 
-peninsula is being rebuilt from scratch.
+penisula is being rebuilt from scratch.
 
 all code must be typed by hands.
 
