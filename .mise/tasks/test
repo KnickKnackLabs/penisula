@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#MISE description="Run the BATS suite"
+#MISE dir="{{config_root}}"
+#USAGE arg "[args]" default="" var=#true help="Test files, directories, or bats flags"
+#USAGE example "mise run test" header="Run every test under test/ in parallel"
+#USAGE example "mise run test test/install.bats" header="Run one file"
+#USAGE example "mise run test --filter installs" header="Filter tests by name"
+#USAGE example "mise run test --jobs 1" header="Run serially for debugging"
+set -euo pipefail
+
+export BATS_DEFAULT_TEST_TARGET="${BATS_DEFAULT_TEST_TARGET:-$MISE_CONFIG_ROOT/test}"
+export BATS_NUMBER_OF_PARALLEL_JOBS="${BATS_NUMBER_OF_PARALLEL_JOBS:-8}"
+export BATS_PARALLEL_BINARY_NAME="${BATS_PARALLEL_BINARY_NAME:-rush}"
+
+exec bats --recursive --print-output-on-failure "$@"
